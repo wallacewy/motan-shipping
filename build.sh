@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+mvn clean package
+
 docker_img="motan-shipping"
 
 docker ps -a | grep $docker_img | awk '{print $1}' | xargs docker rm
